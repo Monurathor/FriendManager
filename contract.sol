@@ -11,7 +11,7 @@ contract FriendManager {
     }
     
     function removeFriend() external {
-          if (friendCount[msg.sender] >0) {
+          if (friendCount[msg.sender] <0) {
             revert("No friends to remove");
         }
         
